@@ -1,0 +1,11 @@
+h1, p {
+    text-align: center;
+}
+button {
+    display: block;
+    border: 1px solid gray;
+    padding: 30px;
+    margin: 0 auto 30px auto;
+    width: 75%;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
