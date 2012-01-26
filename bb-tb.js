@@ -37,8 +37,8 @@
             var events = _.isFunction(this.events) ? this.events() : this.events;
             var that = this;
 
-            function byEventName(key) {
-                return key.substr(0, EVENT_NAME.length + 1) === EVENT_NAME + ' ';
+			function byEventName(key) {
+                return key.substr(0, EVENT_NAME.length + 1) === EVENT_NAME + ' ' || key === EVENT_NAME;
             }
 
             function toJustSelectors(key) {
@@ -46,7 +46,7 @@
             }
 
             function toMatchingElements(selector) {
-                return that.$(selector).toArray();
+                return selector === "" ? [that.el] : that.$(selector).toArray();
             }
 
             function registerTrigger(element) {
