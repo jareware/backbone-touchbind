@@ -37,7 +37,7 @@
             var events = _.isFunction(this.events) ? this.events() : this.events;
             var that = this;
 
-			function byEventName(key) {
+            function byEventName(key) {
                 return key.substr(0, EVENT_NAME.length + 1) === EVENT_NAME + ' ' || key === EVENT_NAME;
             }
 
