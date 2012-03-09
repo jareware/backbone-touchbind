@@ -34,7 +34,7 @@
         addFastButtons: function() {
 
             var EVENT_NAME = 'fastclick';
-            var events = _.isFunction(this.events) ? this.events() : this.events;
+            var events = (_.isFunction(this.events) ? this.events() : this.events) || {};
             var that = this;
 
             function byEventName(key) {
